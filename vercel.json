@@ -20,6 +20,11 @@
         {
             "src":"/(.*)",
             "dest":"ZinkLink_home/wsgi.py"
+        },
+        {
+            "scripts": {
+              "build": "django build --output public"
+            }
         }
     ]
 }
