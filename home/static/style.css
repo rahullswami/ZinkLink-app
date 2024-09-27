@@ -1,0 +1,384 @@
+*{
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+.nav-container{
+  top:0;
+  margin-bottom: 30px;
+  border: 1px solid rgb(171, 170, 170);
+  background-color: #fff;
+}
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+  }
+  
+  .brand-title {
+    font-size: 1.5rem;
+    color: black;
+  }
+  
+  .navbar-links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-links li {
+    margin-left: 20px;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-links a i {
+    margin-right: 8px;
+  }
+  
+  .toggle-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 21px;
+  }
+  
+  .toggle-button .bar {
+    height: 3px;
+    width: 25px;
+    background-color: black;
+    border-radius: 10px;
+  }
+
+.box-container{
+  display: grid;
+  grid-template-areas: 
+  'box-2 box-1 box-4'
+  'box-2 box-3 box-4';
+  position: fixed;
+  top:60px;
+  gap:15px;
+}
+.box{
+  border: 1px solid rgb(171, 170, 170);
+  border-radius: 10px;
+}
+
+.box-1{
+  grid-area: box-1;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+
+.box-2{
+  grid-area: box-2;
+  width: 100%;
+  height: 500px;
+  background-color: #fff;
+  overflow-x:  hidden;
+}
+
+.box-3{
+  grid-area: box-3;
+  width: 650px;
+  height: 800px;
+  overflow-x: hidden;
+  border: none;
+}
+
+.box-4{
+  grid-area: box-4;
+  width: 100%;
+  height: 700px;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+
+.think-home{
+  height: 9000px;
+  width: 100%;
+}
+
+
+.user-image img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border:1px solid gray
+}
+.user-image{
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.user-username{
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.user-bio{
+  width: 300px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.total-posts-likes{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+.total-posts-likes span p {
+  text-align: center;
+}
+
+.searchBar-div{
+  width: 630px;
+  height: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+}
+.box-1{
+  display: flex;
+}
+
+.media-post-and-events a{
+  text-decoration: none;
+  color: rgb(68, 67, 67);
+}
+.media-post-and-events{
+  font-size: 20px;
+}
+.media-post-and-events a i{
+  color: rgb(192, 128, 9);
+}
+.media-post-and-events{
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.news{
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  color: rgb(3, 78, 3);
+  font-weight: bold;
+}
+.box-4 p {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: start;
+  margin: 10px;
+  color: rgb(106, 106, 106);
+}
+.notification-news{
+  width: 300px;
+  padding: 10px;
+}
+.notification-news p {
+  color: rgb(75, 75, 75);
+  font-size: 15px;
+}
+
+.poeple-post-div{
+  width: 100%;
+  background-color:#fff;
+  border: 1px solid rgb(171, 170, 170);
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+.post-heading-and-img-icon{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  padding: 10px;
+}
+.img-icon img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgb(171, 170, 170);
+}
+.heading-username span{
+  font-weight: bold;
+  height: 50px;
+  padding-left: 10px;
+}
+.heading-username span p{
+  font-weight: normal;
+  padding-left: 10px;
+}
+.poeple-post{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.poeple-post img{
+  width: 100%;
+  padding-top: 15px;
+}
+
+.count-like-comment{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.like-comments-icons{
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.fa-heart:hover{
+  color: rgb(181, 3, 3);
+}
+
+.fa-comments:hover{
+  color: rgb(24, 181, 3);
+}
+
+.fa-share-from-square:hover{
+  color: rgb(179, 174, 174);
+}
+
+.fa-bookmark:hover{
+  color: rgb(179, 174, 174);
+}
+
+.follow-post{
+  margin-left: 50px;
+  margin-top: 10px;
+  color: rgb(54, 54, 225);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.user-link{
+  text-decoration: none;
+  color: black;
+}
+.p-fixed{
+  position: fixed;
+  top:37px;
+}
+.news{
+  margin-top: 40px;
+}
+
+@media screen and (max-width:700px) {
+
+  .box-container{
+    grid-template-areas: 
+    'box-1'
+    'box-2'
+    'box-4'
+    'box-3';
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;    
+  }
+  .box-1{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 50px;
+    margin: 0;
+    padding:0;
+    display: none;
+  }
+  .media-post-and-events{
+    display: none;
+  }
+  .searchBar-div{
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+  }
+  .box-2{
+    width: 100%;
+    height: 70px;
+    margin-bottom: 50px;
+    margin: 0;
+    padding:0;
+    display: none;
+  }
+  .user-profile{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .user-profile img{
+    width: 50px;
+    height: 50px;
+    margin: 0;
+  }
+  .total-posts-likes{
+    display: none;
+  }
+  .user-bio{
+    display: none;
+  }
+  .box-4{
+    width: 100%;
+    height: 50px;
+    display: none;
+  }
+  .navbar-links span{
+    display: none;
+  }
+
+  .box-3{
+    margin: 0;
+    padding: 0;
+  }
+  .heading-username p{
+    font-size: auto;
+  }
+  .post-heading-and-img-icon{
+    height: auto;
+  }
+  .follow-post{
+    font-size: 13px;
+  }
+  .brand-title{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+  }
+  .box-3{
+    width: 100vw;
+  }
+}

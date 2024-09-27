@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block title %} Home {% endblock %}
+{% block start%}
+
+<div class="box-3 box">
+    <div class="poeple-post-div py-5 px-5">
+        <form enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label for="fullname" class="form-label">Full Name</label>
+                <input type="text" name="fullname" placeholder="Update name"
+                    class="form-control login-page-input" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="post" class="form-label">Add Post</label>
+                <input type="file" name="post" class="form-control login-page-input" required>
+
+                <button class="btn btn-primary my-3">Save</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+{% comment %} end this here block dont enter this fild {% endcomment %}
+</div>
+</div>
+</main>
+{% endblock %}

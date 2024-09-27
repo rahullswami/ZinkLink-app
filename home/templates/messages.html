@@ -1,0 +1,56 @@
+{% extends "base.html" %} {% block title %} Messages {% endblock %} {% block start%}
+<div class="message-container">
+    <div class="left-message-div">
+        <div class="message-user-div d-flex">
+            {% for profile in profiles %}
+            <div class="chat-user">
+                <img src="/media/{{profile.profile_img}}" alt="">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="message-div">
+        <div class="right-message-div">
+            {% for profile in profiles %}
+            {% if forloop.counter == 1 %}
+            <div class="chat-box-with-input">
+                <div class="user-chat-details">
+                    <div class="post-heading-and-img-icon">
+                        <div class="img-icon">
+                            <img src="/media/{{profile.profile_img}}" alt="">
+                        </div>
+                        <div class="heading-username">
+                            <span>{{request.user.username}}
+                                <p>{{profile.profile_bio | truncatechars:19}}</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="present-chat-here">
+                    {% for message in messages %}
+                    <div class="chat"><p class="text-end">{{message.chat}}</p></div>
+                    {% endfor %}
+                </div>
+                <div class="write-chat-box-and-send-btn">
+                    <form method="post">
+                    {% csrf_token %}
+                        <div class="textarea-chat">
+                            <textarea name="message" placeholder="sent message" name="message" class="form-control"></textarea>
+                        </div>
+                        <button class="btn btn-primary mx-1" type="submit">sent</button>
+                    </form>
+
+                </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% comment %} end this here block dont enter this fild {% endcomment %}
+</div>
+</div>
+</main>
+
+{% endblock %}

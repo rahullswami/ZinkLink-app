@@ -1,0 +1,64 @@
+{% extends "base.html" %} {% block title %} Profile {% endblock %} {% block start%}
+<style>
+    .box-1{
+        display: none;
+    }
+    .box-4{
+        display: none;
+    }
+  
+</style>
+<div class="profile-edit-div">
+    <div class="profile-body py-4">
+        <form enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+            
+            <div class="mb-3">
+                <label for="profile_img" class="form-label">Add your profile</label>
+                <input type="file" name="profile_img" placeholder="user-image"
+                    class="form-control login-page-input">
+            </div>
+
+            <div class="mb-3">
+                <label for="first_name" class="form-label">Update first name</label>
+                <input type="text" name="first_name" placeholder="Update name"
+                    class="form-control login-page-input" value="{{request.user.first_name}}">
+            </div>
+
+            <div class="mb-3">
+                <label for="last_name" class="form-label">Update last name</label>
+                <input type="text" name="last_name" placeholder="Update name"
+                    class="form-control login-page-input" value="{{request.user.last_name}}">
+            </div>
+
+             <div class="mb-3">
+                <label for="username" class="form-label">Update username</label>
+                <input type="text" name="username" placeholder="Update username"
+                    class="form-control login-page-input" value="{{request.user.username}}" >
+            </div>
+
+            <div class="mb-3">
+                <label for="profile_bio" class="form-label">bio</label>
+                
+                <textarea name="profile_bio" placeholder="write bio" class="form-control"></textarea>
+                
+            </div>
+
+            <div class="mb-3">
+                <label for="profile_link" class="form-label">Link</label>
+                <input type="text" name="profile_link" placeholder="link"
+                    class="form-control login-page-input" value="">
+            </div>
+            <button class="btn btn-primary my-3">Save</button>
+            
+        </form>
+    </div>
+</div>
+
+
+{% comment %} end this here block dont enter this fild {% endcomment %}
+</div>
+</div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "base.html" %} {% block title %} Home {% endblock %}
+{% block start%}
+
+<div class="box-3 box">
+  <div class="think-home">
+    {% for profile in profiles %}
+    {% if forloop.counter == 1 %}
+    {% for post in posts %}
+    <div class="poeple-post-div">
+      <div class="post-heading-and-img-icon d-flex justify-content-between">
+        <div class="img-icon d-flex ">
+        
+      
+          <img
+            src="/media/{{profile.profile_img}}"
+            alt="">
+          <div class="heading-username">
+            <span>{{profile.username}}
+              <p class="text-center">{{profile.profile_bio}}</p>
+            </span>
+          </div>
+        </div>
+        <div class="follow-post text-end">
+          <span class="text-end">+ Follow</span>
+        </div>
+      </div>
+      
+      <div class="poeple-post">
+        <img
+          src="/media/{{post.post}}"
+          alt="">
+      </div>
+    
+      <div class="count-like-comment">
+        <span>like <span class="like-count"></span></span>
+        <span><span>0</span> comments</span>
+      </div>
+      <hr>
+      <div class="like-comments-icons">
+        <i class="fa-regular fa-heart" title="like"></i>
+        <i class="fa-regular fa-comments"></i>
+        <i class="fa-regular fa-share-from-square share"></i>
+        <i class="fa-regular fa-bookmark"></i>
+      </div>
+      </div>
+    {% endfor %}
+      {% endif %}
+      {% endfor %}
+  </div>
+</div>
+
+
+{% comment %} end this here block dont enter this fild {% endcomment %}
+</div>
+</div>
+</main>
+{% endblock %}

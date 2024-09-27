@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block title %} Friends {% endblock %} {% block start%}
+<div class="message-div d-flex ">
+{% for profile in profiles %}
+
+
+    <div class="followers-container">
+        <div class="follower-image">
+            <img src="/media/{{profile.profile_img}}" alt="">
+        </div>
+        <div class="follower-details">
+            <span>{{request.user.username}}</span>
+            <p>{{profile.profile_bio | truncatechars:15}}</p>
+            <button class="btn btn-primary">follow</button>
+            <button class="btn btn-danger">ignore</button>
+        </div>
+    </div>
+{% endfor %}
+</div>
+{% comment %} end this here block dont enter this fild {% endcomment %}
+</div>
+</div>
+</main>
+
+{% endblock %}

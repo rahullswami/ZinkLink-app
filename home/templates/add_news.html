@@ -1,0 +1,45 @@
+{% extends "base.html" %} {% block title %} Add News {% endblock %}
+{% block css%}
+<style>
+    .box-1{
+        display: none;
+    }
+</style>
+{% endblock %}
+{% block start%}
+
+<div class="box-3 box">
+   <div class="poeple-post-div py-3 px-5">
+    <h1 class="py-3">Add News</h1>
+    <form enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <label for="heading" class="form-label">Heading</label>
+            <input type="text" name="heading" placeholder="Add Heading"
+                class="form-control login-page-input" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="sub_heading" class="form-label">Sub Heading</label>
+            <input type="text" name="sub_heading" placeholder="Add Sub Heading"
+                class="form-control login-page-input" required>
+        </div>        
+
+        <div class="mb-3">
+            <label for="news" class="form-label">News</label>            
+            <textarea name="news" placeholder="Write News" class="form-control"></textarea>            
+        </div>
+       
+        <button class="btn btn-primary my-3">Save</button>
+        
+    </form>
+   </div>
+</div>
+
+
+{% comment %} end this here block dont enter this fild {% endcomment %}
+</div>
+</div>
+</main>
+{% endblock %}
